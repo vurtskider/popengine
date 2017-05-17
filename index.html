@@ -23,286 +23,286 @@
     <link rel="stylesheet" href="manual.css">
 </head>
 <body>
-    <h1 class="main">POPEngine</h1>
-    <h2 class="submain">JS бiблiотека для створення вспливаючих вiкон</h2>
-    <section id="description">
-        <div class="row">
-            <p>Відкрита JavaScript бібліотека, призначена для створення вспливаючих вікон, виконана за стандартом ECMAScript 5</p>
-        </div>
-    </section>
-    <section id="install">
-        <div class="row">
-            <h3>Встановлення бiблiотеки</h3>
-            <ol>
-                <li>Завантажити бібліотеку <a href="POPEngine.rar">тут ⇩</a></li>
-                <li>
-                    <div class="step">
-                        В блоці head додати css
-                    </div>
-                    <div class="step code"><tag>&lt;head&gt;</tag>
-                        &emsp;<tag>&lt;link</tag> rel=<quot>&quot;stylesheet&quot;</quot> href=<quot>&quot;POPEngine.min.css&quot;</quot><tag>&gt;</tag>
-                        <tag>&lt;/head&gt;</tag>
-                    </div>
-                </li>
-                <li>
-                    <div class="step">
-                        В кінці документа додати js
-                    </div>
-                    <div class="step code"><tag>&lt;/body&gt;</tag>
-                        &emsp;<tag>&lt;script</tag> src=<quot>&quot;POPEngine.min.js&quot;</quot><tag>&gt;&lt;/script&gt;</tag>
-                            <tag>&lt;/html&gt;</tag>
-                    </div>
-                </li>
-            </ol>
-        </div>
-    </section>
-    <section id="example">
-        <div class="row">
-            <h3>Приклад використання</h3>
-            <ol>
-                <li>
-                    <div class="step">
-                        Створюємо елемент з якого потім буде зроблено pop-up
-                    </div>
-                    <div class="step code"><tag>&lt;div</tag> id=<quot>&quot;dpop&quot;</quot><tag>&gt;&lt;/div&gt</tag>;
-                    </div>
-                </li>
-                <li>
-                    <div class="step">
-                        Проводимо ініціалізацію об'єкта. Перший параметр - id елемента. Другий - контент. Третій - об'єкт з опціями.
-                    </div>
-                    <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'dpop'</quot><mod>,</mod> <quot>'My Content'</quot><mod>,</mod> {
-                        &emsp;<attr>activator:</attr> <quot>'#openpop'</quot><mod>,</mod>
-                        &emsp;<attr>header:</attr> <quot>'My Header'</quot>
-                        })<mod>;</mod>
-                    </div>
-                </li>
-            </ol>
-            <iframe src="preview.html?p=1" width="100%" height="400px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
-                Ваш браузер не поддерживает фреймы!
+<h1 class="main">POPEngine</h1>
+<h2 class="submain">JS library to create the pop-up windows</h2>
+<section id="description">
+    <div class="row">
+        <p>Open JavaScript library designed for creating pop-up windows, made by standard ECMAScript 5</p>
+    </div>
+</section>
+<section id="install">
+    <div class="row">
+        <h3>Installing</h3>
+        <ol>
+            <li>Download library <a href="POPEngine.rar">here ⇩</a></li>
+            <li>
+                <div class="step">
+                    In head link css
+                </div>
+                <div class="step code"><tag>&lt;head&gt;</tag>
+                    &emsp;<tag>&lt;link</tag> rel=<quot>&quot;stylesheet&quot;</quot> href=<quot>&quot;POPEngine.min.css&quot;</quot><tag>&gt;</tag>
+                    <tag>&lt;/head&gt;</tag>
+                </div>
+            </li>
+            <li>
+                <div class="step">
+                    At the end of page add js
+                </div>
+                <div class="step code"><tag>&lt;/body&gt;</tag>
+                    &emsp;<tag>&lt;script</tag> src=<quot>&quot;POPEngine.min.js&quot;</quot><tag>&gt;&lt;/script&gt;</tag>
+                    <tag>&lt;/html&gt;</tag>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+<section id="example">
+    <div class="row">
+        <h3>Examples</h3>
+        <ol>
+            <li>
+                <div class="step">
+                    Creating element for future pop-up
+                </div>
+                <div class="step code"><tag>&lt;div</tag> id=<quot>&quot;dpop&quot;</quot><tag>&gt;&lt;/div&gt</tag>;
+                </div>
+            </li>
+            <li>
+                <div class="step">
+                    Initialize the object. The first option - id of element. Second - content. Third - the object with options.
+                </div>
+                <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'dpop'</quot><mod>,</mod> <quot>'My Content'</quot><mod>,</mod> {
+                    &emsp;<attr>activator:</attr> <quot>'#openpop'</quot><mod>,</mod>
+                    &emsp;<attr>header:</attr> <quot>'My Header'</quot>
+                    })<mod>;</mod>
+                </div>
+            </li>
+        </ol>
+        <iframe src="preview.html?p=1" width="100%" height="400px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
+            Your browser does not support frames!
+        </iframe>
+    </div>
+</section>
+<section id="additional-examples">
+    <div class="row">
+        <h3>Addition examples</h3>
+        <ol>
+            <li>
+                <div class="step">
+                    Initialize the object (template: "default", animation: "slide", direction: "top"):
+                </div>
+                <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'dpop'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
+                    &emsp;<attr>activator:</attr> <quot>'#openpop'</quot><mod>,</mod>
+                    &emsp;<attr>header:</attr> <quot>'My Header'</quot><mod>,</mod>
+                    &emsp;<attr>animation:</attr> <quot>'slide'</quot><mod>,</mod>
+                    &emsp;<attr>direction:</attr> <quot>'top'</quot><mod>,</mod>
+                    &emsp;<attr>buttons:</attr> [
+                    &emsp;{
+                    &emsp;&emsp;&emsp;<attr>id:</attr> <quot>'ok'</quot><mod>,</mod> <attr>title:</attr> <quot>'OK'</quot><mod>,</mod> <attr>function:</attr> function () {
+                    &emsp;&emsp;&emsp;&emsp;<tag>alert</tag>(1);
+                    &emsp;&emsp;&emsp;&emsp;<mod>return false;</mod>
+                    &emsp;&emsp;&emsp;}
+                    &emsp;},
+                    &emsp;&emsp;{<attr>id:</attr> <quot>'cancel'</quot><mod>,</mod> <attr>title:</attr> <quot>'Cancel'</quot>}
+                    ]
+                    })<mod>;</mod>
+
+                </div>
+            </li>
+            <iframe src="preview.html?p=21" width="100%" height="400px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
+                Your browser does not support frames!
             </iframe>
+            <li>
+                <div class="step">
+                    Initialize the object (template: "default", animation: "slide", direction: "right"):
+                </div>
+                <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'dpop'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
+                    &emsp;<attr>activator:</attr> <quot>'#openpop'</quot><mod>,</mod>
+                    &emsp;<attr>header:</attr> <quot>'My Header'</quot><mod>,</mod>
+                    &emsp;<attr>animation:</attr> <quot>'slide'</quot><mod>,</mod>
+                    &emsp;<attr>direction:</attr> <quot>'right'</quot><mod>,</mod>
+                    &emsp;<attr>buttons:</attr> [
+                    &emsp;{
+                    &emsp;&emsp;&emsp;<attr>id:</attr> <quot>'ok'</quot><mod>,</mod> <attr>title:</attr> <quot>'OK'</quot><mod>,</mod> <attr>function:</attr> function () {
+                    &emsp;&emsp;&emsp;&emsp;<tag>alert</tag>(1);
+                    &emsp;&emsp;&emsp;&emsp;<mod>return false;</mod>
+                    &emsp;&emsp;&emsp;}
+                    &emsp;},
+                    &emsp;&emsp;{<attr>id:</attr> <quot>'cancel'</quot><mod>,</mod> <attr>title:</attr> <quot>'Cancel'</quot>}
+                    ]
+                    })<mod>;</mod>
+
+                </div>
+            </li>
+            <iframe src="preview.html?p=22" width="100%" height="400px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
+                Your browser does not support frames!
+            </iframe>
+            <li>
+                <div class="step">
+                    Initialize the object (template: "default", animation: "fade"):
+                </div>
+                <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'dpop'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
+                    &emsp;<attr>activator:</attr> <quot>'#openpop'</quot><mod>,</mod>
+                    &emsp;<attr>header:</attr> <quot>'My Header'</quot><mod>,</mod>
+                    &emsp;<attr>animation:</attr> <quot>'fade'</quot><mod>,</mod>
+                    &emsp;<attr>buttons:</attr> [
+                    &emsp;{
+                    &emsp;&emsp;&emsp;<attr>id:</attr> <quot>'ok'</quot><mod>,</mod> <attr>title:</attr> <quot>'OK'</quot><mod>,</mod> <attr>function:</attr> function () {
+                    &emsp;&emsp;&emsp;&emsp;<tag>alert</tag>(1);
+                    &emsp;&emsp;&emsp;&emsp;<mod>return false;</mod>
+                    &emsp;&emsp;&emsp;}
+                    &emsp;},
+                    &emsp;&emsp;{<attr>id:</attr> <quot>'cancel'</quot><mod>,</mod> <attr>title:</attr> <quot>'Cancel'</quot>}
+                    ]
+                    })<mod>;</mod>
+
+                </div>
+            </li>
+            <iframe src="preview.html?p=23" width="100%" height="400px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
+                Your browser does not support frames!
+            </iframe>
+            <li>
+                <div class="step">
+                    Initialize the object (template: "sideblock", animation: "slide", direction: "right"):
+                </div>
+                <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'side-pop'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
+                    &emsp;<attr>template:</attr> <quot>'sideblock'</quot><mod>,</mod>
+                    &emsp;<attr>direction:</attr> <quot>'right'</quot><mod>,</mod>
+                    &emsp;<attr>height:</attr> <quot>'70px'</quot><mod>,</mod>
+                    &emsp;<attr>width:</attr> <quot>'120px'</quot>
+                    })<mod>;</mod>
+
+                </div>
+            </li>
+            <iframe src="preview.html?p=3" width="100%" height="200px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
+                Your browser does not support frames!
+            </iframe>
+            <li>
+                <div class="step">
+                    Initialize the object (template: "notice", the animation: "fade"):
+                </div>
+                <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'notice'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
+                    &emsp;<attr>template:</attr> <quot>'notice'</quot><mod>,</mod>
+                    &emsp;<attr>animation:</attr> <quot>'fade'</quot><mod>,</mod>
+                    &emsp;<attr>activator:</attr> <quot>'#not'</quot><mod>,</mod>
+                    &emsp;<attr>height:</attr> <quot>'55px'</quot><mod>,</mod>
+                    &emsp;<attr>top:</attr> <quot>'4px'</quot><mod>,</mod>
+                    &emsp;<attr>autoclose:</attr> <quot>'2s'</quot>
+                    })<mod>;</mod>
+                </div>
+            </li>
+            <iframe src="preview.html?p=4" width="100%" height="150px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
+                Your browser does not support frames!
+            </iframe>
+        </ol>
+    </div>
+</section>
+<section id="options">
+    <div class="row">
+        <h3>Options</h3>
+        <div class="step code"><attr>animation:</attr> <quot>'fade'</quot>
         </div>
-    </section>
-    <section id="additional-examples">
-        <div class="row">
-            <h3>Додатковi приклади</h3>
-            <ol>
-                <li>
-                    <div class="step">
-                        Ініціалізація об'єкта (шаблон:"default", анімація: "slide", напрямок: "top"):
-                    </div>
-                    <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'dpop'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
-                        &emsp;<attr>activator:</attr> <quot>'#openpop'</quot><mod>,</mod>
-                        &emsp;<attr>header:</attr> <quot>'My Header'</quot><mod>,</mod>
-                        &emsp;<attr>animation:</attr> <quot>'slide'</quot><mod>,</mod>
-                        &emsp;<attr>direction:</attr> <quot>'top'</quot><mod>,</mod>
-                        &emsp;<attr>buttons:</attr> [
-                        &emsp;{
-                        &emsp;&emsp;&emsp;<attr>id:</attr> <quot>'ok'</quot><mod>,</mod> <attr>title:</attr> <quot>'OK'</quot><mod>,</mod> <attr>function:</attr> function () {
-                        &emsp;&emsp;&emsp;&emsp;<tag>alert</tag>(1);
-                        &emsp;&emsp;&emsp;&emsp;<mod>return false;</mod>
-                        &emsp;&emsp;&emsp;}
-                        &emsp;},
-                        &emsp;&emsp;{<attr>id:</attr> <quot>'cancel'</quot><mod>,</mod> <attr>title:</attr> <quot>'Cancel'</quot>}
-                        ]
-                        })<mod>;</mod>
-
-                    </div>
-                </li>
-                <iframe src="preview.html?p=21" width="100%" height="400px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
-                    Ваш браузер не поддерживает фреймы!
-                </iframe>
-                <li>
-                    <div class="step">
-                        Ініціалізація об'єкта (шаблон:"default", анімація: "slide", напрямок: "right"):
-                    </div>
-                    <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'dpop'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
-                        &emsp;<attr>activator:</attr> <quot>'#openpop'</quot><mod>,</mod>
-                        &emsp;<attr>header:</attr> <quot>'My Header'</quot><mod>,</mod>
-                        &emsp;<attr>animation:</attr> <quot>'slide'</quot><mod>,</mod>
-                        &emsp;<attr>direction:</attr> <quot>'right'</quot><mod>,</mod>
-                        &emsp;<attr>buttons:</attr> [
-                        &emsp;{
-                        &emsp;&emsp;&emsp;<attr>id:</attr> <quot>'ok'</quot><mod>,</mod> <attr>title:</attr> <quot>'OK'</quot><mod>,</mod> <attr>function:</attr> function () {
-                        &emsp;&emsp;&emsp;&emsp;<tag>alert</tag>(1);
-                        &emsp;&emsp;&emsp;&emsp;<mod>return false;</mod>
-                        &emsp;&emsp;&emsp;}
-                        &emsp;},
-                        &emsp;&emsp;{<attr>id:</attr> <quot>'cancel'</quot><mod>,</mod> <attr>title:</attr> <quot>'Cancel'</quot>}
-                        ]
-                        })<mod>;</mod>
-
-                    </div>
-                </li>
-                <iframe src="preview.html?p=22" width="100%" height="400px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
-                    Ваш браузер не поддерживает фреймы!
-                </iframe>
-                <li>
-                    <div class="step">
-                        Ініціалізація об'єкта (шаблон:"default", анімація: "fade"):
-                    </div>
-                    <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'dpop'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
-                        &emsp;<attr>activator:</attr> <quot>'#openpop'</quot><mod>,</mod>
-                        &emsp;<attr>header:</attr> <quot>'My Header'</quot><mod>,</mod>
-                        &emsp;<attr>animation:</attr> <quot>'fade'</quot><mod>,</mod>
-                        &emsp;<attr>buttons:</attr> [
-                        &emsp;{
-                        &emsp;&emsp;&emsp;<attr>id:</attr> <quot>'ok'</quot><mod>,</mod> <attr>title:</attr> <quot>'OK'</quot><mod>,</mod> <attr>function:</attr> function () {
-                        &emsp;&emsp;&emsp;&emsp;<tag>alert</tag>(1);
-                        &emsp;&emsp;&emsp;&emsp;<mod>return false;</mod>
-                        &emsp;&emsp;&emsp;}
-                        &emsp;},
-                        &emsp;&emsp;{<attr>id:</attr> <quot>'cancel'</quot><mod>,</mod> <attr>title:</attr> <quot>'Cancel'</quot>}
-                        ]
-                        })<mod>;</mod>
-
-                    </div>
-                </li>
-                <iframe src="preview.html?p=23" width="100%" height="400px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
-                    Ваш браузер не підтримує фрейми!
-                </iframe>
-                <li>
-                    <div class="step">
-                        Ініціалізація об'єкта (шаблон:"sideblock", анімація: "slide", напрямок: "right"):
-                    </div>
-                    <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'side-pop'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
-                        &emsp;<attr>template:</attr> <quot>'sideblock'</quot><mod>,</mod>
-                        &emsp;<attr>direction:</attr> <quot>'right'</quot><mod>,</mod>
-                        &emsp;<attr>height:</attr> <quot>'70px'</quot><mod>,</mod>
-                        &emsp;<attr>width:</attr> <quot>'120px'</quot>
-                        })<mod>;</mod>
-
-                    </div>
-                </li>
-                <iframe src="preview.html?p=3" width="100%" height="200px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
-                    Ваш браузер не підтримує фрейми!
-                </iframe>
-                <li>
-                    <div class="step">
-                        Ініціалізація об'єкта (шаблон:"notice", анімація: "fade"):
-                    </div>
-                    <div class="step code"><mod>var</mod> pop = <mod>new</mod> POPEngine(<quot>'notice'</quot><mod>,</mod> <quot>'Hello World'</quot><mod>,</mod> {
-                        &emsp;<attr>template:</attr> <quot>'notice'</quot><mod>,</mod>
-                        &emsp;<attr>animation:</attr> <quot>'fade'</quot><mod>,</mod>
-                        &emsp;<attr>activator:</attr> <quot>'#not'</quot><mod>,</mod>
-                        &emsp;<attr>height:</attr> <quot>'55px'</quot><mod>,</mod>
-                        &emsp;<attr>top:</attr> <quot>'4px'</quot><mod>,</mod>
-                        &emsp;<attr>autoclose:</attr> <quot>'2s'</quot>
-                        })<mod>;</mod>
-                    </div>
-                </li>
-                <iframe src="preview.html?p=4" width="100%" height="150px" style="border: 1px solid #fff;animation-name: lightBoxShadow;animation-duration: 6s;animation-timing-function: linear;animation-iteration-count: infinite;animation-direction: alternate;transition: box-shadow 6s;">
-                    Ваш браузер не підтримує фрейми!
-                </iframe>
-            </ol>
+        <div class="step">
+            Setting type of animation: (For default and notice: instant, slide, fade; sideblock: slide)
         </div>
-    </section>
-    <section id="options">
-        <div class="row">
-            <h3>Параметри</h3>
-            <div class="step code"><attr>animation:</attr> <quot>'fade'</quot>
-            </div>
-            <div class="step">
-                Встановлює тип анімації: (Для default і notice: instant, slide, fade; sideblock: slide)
-            </div>
-            <hr>
-            <div class="step code"><attr>autoclose:</attr> <quot>'5s'</quot>
-            </div>
-            <div class="step">
-                Встановлює час автозакриття сповіщення (notice) у секундах або мілісекундах
-            </div>
-            <hr>
-            <div class="step code"><attr>activator:</attr> <quot>'cssselector'</quot>
-            </div>
-            <div class="step">
-                Встановлює елементи, клік на які відкриватиме pop-up
-            </div>
-            <hr>
-            <div class="step code"><attr>buttons:</attr> [{<attr>id:</attr><quot>'ok'</quot>,<attr>title:</attr><quot>'OK'</quot>,<attr>function:</attr>function(){<tag>alert</tag>(1)<mod>;return false;</mod>}}]
-            </div>
-            <div class="step">
-                Встановлює кнопки та функції, які будуть виконуватися на їх клік
-            </div>
-            <hr>
-            <div class="step code"><attr>class:</attr> <quot>'addition clases'</quot>
-            </div>
-            <div class="step">
-                Встановлює додаткові класи
-            </div>
-            <hr>
-            <div class="step code"><attr>closer:</attr> <quot>'cssselector'</quot>
-            </div>
-            <div class="step">
-                Встановлює додаткові елементи, клік на які закриватиме pop-up
-            </div>
-            <hr>
-            <div class="step code"><attr>cross:</attr> true
-            </div>
-            <div class="step">
-                Встановлює чи відображати хрест для закриття
-            </div>
-            <hr>
-            <div class="step code"><attr>direction:</attr> <quot>'top'</quot>
-            </div>
-            <div class="step">
-                Встановлює напрямок появи
-            </div>
-            <hr>
-            <div class="step code"><attr>duration:</attr> <quot>'1s'</quot>
-            </div>
-            <div class="step">
-                Встановлює тривалість анімації
-            </div>
-            <hr>
-            <div class="step code"><attr>ground:</attr> true
-            </div>
-            <div class="step">
-                Встановлює чи відображати фонове затемнення
-            </div>
-            <hr>
-            <div class="step code"><attr>header:</attr> <quot>'My Header'</quot>
-            </div>
-            <div class="step">
-                Встановлює заговок (якщо порожній, то блок не відображається)
-            </div>
-            <hr>
-            <div class="step code"><attr>height:</attr> <quot>'230px'</quot>
-            </div>
-            <div class="step">
-                Встановлює висоту (% або px)
-            </div>
-            <hr>
-            <div class="step code"><attr>left:</attr> <quot>'center'</quot>
-            </div>
-            <div class="step">
-                Встановлює відступ зліва, може приймати 'center', % або px
-            </div>
-            <hr>
-            <div class="step code"><attr>sideKeyThick:</attr> <quot>'28px'</quot>
-            </div>
-            <div class="step">
-                Встановлює товщину "ярлика" (шаблон: sideblock)
-            </div>
-            <hr>
-            <div class="step code"><attr>top:</attr> <quot>'center'</quot>
-            </div>
-            <div class="step">
-                Встановлює відступ зверху, може приймати 'center', % або px
-            </div>
-            <hr>
-            <div class="step code"><attr>template:</attr> <quot>'default'</quot>
-            </div>
-            <div class="step">
-                Встановлює шаблон pop-up, може приймати значення: default, sideblock, notice
-            </div>
-            <hr>
-            <div class="step code"><attr>width:</attr> <quot>'350px'</quot>
-            </div>
-            <div class="step">
-                Встановлює ширину (% або px)
-            </div>
+        <hr>
+        <div class="step code"><attr>autoclose:</attr> <quot>'5s'</quot>
         </div>
-    </section>
-    <a href="https://vk.com/vurtskider"  style="font-family: porsche;font-size: 15px;text-align: center;width: 100%;display: block">Розробив - Vurt</a>
+        <div class="step">
+            Set the time of autoclosing of notification in seconds or milliseconds
+        </div>
+        <hr>
+        <div class="step code"><attr>activator:</attr> <quot>'cssselector'</quot>
+        </div>
+        <div class="step">
+            Sets the items that will open pop-up on click
+        </div>
+        <hr>
+        <div class="step code"><attr>buttons:</attr> [{<attr>id:</attr><quot>'ok'</quot>,<attr>title:</attr><quot>'OK'</quot>,<attr>function:</attr>function(){<tag>alert</tag>(1)<mod>;return false;</mod>}}]
+        </div>
+        <div class="step">
+            Set the functions for buttons that will be performed on the click
+        </div>
+        <hr>
+        <div class="step code"><attr>class:</attr> <quot>'addition clases'</quot>
+        </div>
+        <div class="step">
+            Set addition classes
+        </div>
+        <hr>
+        <div class="step code"><attr>closer:</attr> <quot>'cssselector'</quot>
+        </div>
+        <div class="step">
+            Set addition elements for closing pop-up by click
+        </div>
+        <hr>
+        <div class="step code"><attr>cross:</attr> true
+        </div>
+        <div class="step">
+            Set display cross for closing
+        </div>
+        <hr>
+        <div class="step code"><attr>direction:</attr> <quot>'top'</quot>
+        </div>
+        <div class="step">
+            Set the direction of appearance
+        </div>
+        <hr>
+        <div class="step code"><attr>duration:</attr> <quot>'1s'</quot>
+        </div>
+        <div class="step">
+            Set duration of animation
+        </div>
+        <hr>
+        <div class="step code"><attr>ground:</attr> true
+        </div>
+        <div class="step">
+            Set to display background closer
+        </div>
+        <hr>
+        <div class="step code"><attr>header:</attr> <quot>'My Header'</quot>
+        </div>
+        <div class="step">
+            Set header (if empty, the header does not appear)
+        </div>
+        <hr>
+        <div class="step code"><attr>height:</attr> <quot>'230px'</quot>
+        </div>
+        <div class="step">
+            Set height (% or px)
+        </div>
+        <hr>
+        <div class="step code"><attr>left:</attr> <quot>'center'</quot>
+        </div>
+        <div class="step">
+            Set left indent, can take 'center',% or px
+        </div>
+        <hr>
+        <div class="step code"><attr>sideKeyThick:</attr> <quot>'28px'</quot>
+        </div>
+        <div class="step">
+            Set width of "label" (template: sideblock)
+        </div>
+        <hr>
+        <div class="step code"><attr>top:</attr> <quot>'center'</quot>
+        </div>
+        <div class="step">
+            Set top intent, can take 'center',% or px
+        </div>
+        <hr>
+        <div class="step code"><attr>template:</attr> <quot>'default'</quot>
+        </div>
+        <div class="step">
+            Set template for pop-up, can take values: default, sideblock, notice
+        </div>
+        <hr>
+        <div class="step code"><attr>width:</attr> <quot>'350px'</quot>
+        </div>
+        <div class="step">
+            Set width (% або px)
+        </div>
+    </div>
+</section>
+<a href="https://vk.com/vurtskider"  style="font-family: porsche;font-size: 15px;text-align: center;width: 100%;display: block">Developed by Vurt</a>
 </body>
 </html>
