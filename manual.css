@@ -1,0 +1,139 @@
+@font-face {
+    font-family: porsche;
+    src: url('./fonts/porsche.ttf');
+}
+@keyframes blik {
+    from {
+        background-position-x: 0px;
+    }
+    to {
+        background-position-x: 1920px;
+    }
+}
+@keyframes lightBoxShadow {
+    from {
+        box-shadow: 0 0 4px #f3c5d9, inset 0 0 4px #f3c5d9;
+    }
+    to {
+        box-shadow: 0 0 10px #f37ec8, inset 0 0 10px #f37ec8;
+    }
+}
+.row {
+    width: 100%;
+    box-sizing: border-box;
+}
+body {
+    background: url("./img/grad.png") #5c002e repeat;
+    background-position-x: 0px;
+    background-size: 110% auto;
+    animation-name: blik;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+ol,ul {
+    margin: 0;
+}
+section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 15px auto;
+    color: #f3c5d9;
+    font-family: Verdana;
+    font-size: 14px;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    box-shadow: 0 0 8px #f3c5d9, inset 0 0 8px #f3c5d9;
+    animation-name: lightBoxShadow;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: box-shadow 6s;
+}
+hr {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 0 8px #f3c5d9, inset 0 0 8px #f3c5d9;
+    animation-name: lightBoxShadow;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: box-shadow 6s;
+}
+h3 {
+    font-family: porsche;
+    margin-top: 0;
+}
+a {
+    color: #fff;
+    text-shadow: 0 0 6px #f3c5d9;
+    transition: text-shadow 0.4s;
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 0 0 9px #f3c5d9,0 0 12px #f3c5d9;
+}
+
+h1.main {
+    font-family: porsche;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 25px;
+    margin-bottom: 0;
+    color: #f3c5d9;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+h2.submain {
+    font-family: porsche;
+    text-align: center;
+    font-size: 17px;
+    width: 600px;
+    margin: 0 auto 25px;
+    color: #f3c5d9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.step {
+    display: inline-block;
+    vertical-align: middle;
+    width: 49%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+.code {
+    white-space: pre-line;
+    background: rgba(47, 47, 47, 0.5);
+    border: 2px solid rgba(25,25,25,0.5);
+    border-radius: 6px;
+    display: inline-block;
+    padding: 15px 20px;
+}
+.code * {
+    display: inline;
+}
+.code tag {
+    color: #ccb22c;
+}
+.code quot {
+    color: #8fb73e;
+}
+.code mod {
+    color: #d05206;
+}
+.code attr {
+    color: #8851a2;
+}
+.step.code {
+    margin: 20px 0;
+}

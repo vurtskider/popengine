@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POPEngine</title>
+    <style>
+        body>* {
+            display: none;
+        }
+        button {
+             border: 1px solid #8c8989;
+             padding: 4px 20px;
+             background-color: #e0dcdc;
+         }
+        body>button {
+            box-shadow: 0 0 4px #f3c5d9, inset 0 0 4px #f3c5d9;
+            background: none;
+            border: 1px solid #fff;
+            color: #f3c5d9;
+        }
+    </style>
+    <link rel="stylesheet" href="POPEngine.min.css">
+</head>
+<body>
+    <button id="openpop">Get pop!</button>
+    <button id="not">Get not!</button>
+    <div id="dpop"></div>
+    <div id="side-pop"></div>
+    <div id="notice"></div>
+    <pre>options = {
+            animation: 'instant',//type of animation: (for default & notice: instant, slide, fade; sideblock: slide)
+            autoclose: '5s',//autoclose of template 'notice'
+            activator: 'cssselector',
+            buttons: [{id:'ok',title:'OK',function:function(){alert(1);return false;}}],
+            class: 'addition clases',
+            closer: 'cssselector',
+            cross: true,//close cross
+            direction: 'up',//required in template sideblock
+            duration: '1s',//duration of animation
+            ground: true,//background cover (as closer)
+            header: '',//header of pop
+            height: '230px',//% or px
+            left: 'center',//can be center, % or px
+            sideKeyThick: '28px',
+            top: 'center',//can be center, % or px
+            template: 'default',//default,sideblock,notice
+            width: '350px'//% or px
+        };</pre>
+</body>
+<script src="POPEngine.min.js"></script>
+<script>
+    if(window.location.toString().indexOf('?')) {
+        var qs  = window.location.toString().split('?')[1];
+        var GET = getQueryParams(qs);
+        switch (parseInt(GET.p)) {
+            case 1:
+                var pop = new POPEngine('dpop', 'My Content', {
+                    activator: '#openpop',
+                    header: 'My Header',
+                });
+                break;
+            case 21:
+                var pop = new POPEngine('dpop', 'Hello World', {
+                    animation: 'slide',
+                    direction: 'top',
+                    template: 'default',
+                    activator: '#openpop',
+                    header: 'My Header',
+                    buttons: [
+                        {
+                            id: 'ok', title: 'OK', function: function () {
+                            alert(1);
+                            return false;
+                        }
+                        },
+                        {id: 'cancel', title: 'Cancel'}
+                    ]
+                });
+                break;
+            case 22:
+                var pop = new POPEngine('dpop', 'Hello World', {
+                    animation: 'slide',
+                    direction: 'right',
+                    template: 'default',
+                    activator: '#openpop',
+                    header: 'My Header',
+                    buttons: [
+                        {
+                            id: 'ok', title: 'OK', function: function () {
+                            alert(1);
+                            return false;
+                        }
+                        },
+                        {id: 'cancel', title: 'Cancel'}
+                    ]
+                });
+                break;
+            case 23:
+                var pop = new POPEngine('dpop', 'Hello World', {
+                    animation: 'fade',
+                    template: 'default',
+                    activator: '#openpop',
+                    header: 'My Header',
+                    buttons: [
+                        {
+                            id: 'ok', title: 'OK', function: function () {
+                            alert(1);
+                            return false;
+                        }
+                        },
+                        {id: 'cancel', title: 'Cancel'}
+                    ]
+                });
+                break;
+            case 3:
+                var pop = new POPEngine('side-pop', 'Hello World', {
+                    template: 'sideblock',
+                    direction: 'right',
+                    height: '70px',
+                    width: '120px'
+                });
+                break;
+            case 4:
+                var pop = new POPEngine('notice', 'Hello World', {
+                    template: 'notice',
+                    animation: 'fade',
+                    activator: '#not',
+                    height: '55px',
+                    top: '4px',
+                    autoclose: '2s'
+                });
+                break;
+        }
+        var act = document.querySelector(pop.options.activator);
+        act.style.display = 'block';
+    }
+    function getQueryParams(qs) {
+        qs = qs.split('+').join(' ');
+
+        var params = {},
+                tokens,
+                re = /[?&]?([^=]+)=([^&]*)/g;
+
+        while (tokens = re.exec(qs)) {
+            params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+        }
+        return params;
+    }
+    </script>
+</html>
